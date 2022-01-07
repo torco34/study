@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Home } from "./peges/Home";
 // import { Reviews } from "./peges/ Reviews";
+import { Usestate } from "./peges/Usestate";
 // import { Reissues } from "./peges/Reissues";
 // import { Interviews } from "./peges/Interviews";
 // import { Podcast } from "./peges/Podcast";
@@ -14,6 +15,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/usestate" element={<Usestate />}></Route>
       </Routes>
     </Router>
   );

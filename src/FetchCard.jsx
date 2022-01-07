@@ -3,18 +3,18 @@ import getPots from "./components/getPots";
 import getUser from "./components/getUser";
 
 // console.log(getUser);
-const initialUser = {
-  name: "sergio",
-  email: "sergioebeltran@gmail.com",
-};
+// const initialUser = {
+//   name: "sergio",
+//   email: "sergioebeltran@gmail.com",
+// };
 
-const initialPosts = [
-  { id: 1, title: "Post 1" },
-  { id: 2, title: "Post 2" },
-];
+// const initialPosts = [
+//   { id: 1, title: "Post 1" },
+//   { id: 2, title: "Post 2" },
+// ];
 const FetchCard = () => {
-  const [user, setUser] = React.useState(initialUser);
-  const [posts, setsPosts] = React.useState(initialPosts);
+  const [user, setUser] = React.useState({});
+  const [posts, setsPosts] = React.useState([]);
   const updateUser = () => {
     getUser().then((newUser) => {
       setUser(newUser);
@@ -32,7 +32,9 @@ const FetchCard = () => {
   }, []);
 
   useEffect(() => {
-    updatePosts();
+    if (user.id) {
+      updatePosts();
+    }
   }, [user]);
   return (
     <>

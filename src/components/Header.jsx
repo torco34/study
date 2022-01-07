@@ -9,8 +9,8 @@ const Header = () => {
           <Link to="/">
             <p className="active">useEffect</p>
           </Link>
-          <Link to="/reviews">
-            <p> Reviews</p>
+          <Link to="/usestate">
+            <p>UseStata</p>
           </Link>
           <Link to="/Reissues">
             <p>Reissues</p>

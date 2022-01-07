@@ -8,7 +8,7 @@ const color = {
   aqua: "#00ffff",
 };
 const GrupoList = styled.div`
-  background: coral;
+  background: ${color.burlywood};
 
   ul {
     display: flex;
